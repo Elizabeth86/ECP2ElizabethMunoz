@@ -68,4 +68,7 @@ public class Fraction {
     	return isEquivalent;
     }
     
+    public Fraction sumaFraccion(Fraction f1, Fraction f2){
+    	return this;
+    }
 }
