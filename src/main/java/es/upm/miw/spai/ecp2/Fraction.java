@@ -67,4 +67,13 @@ public class Fraction {
     	return f1;
     }
     
+    public Fraction suma (Fraction f){
+    	Fraction[] f1 = new Fraction[2];
+    	f1[0] = this;
+    	f1[1] = f;
+    	f1 = reducirFraccion(f1);
+    	Fraction f2= new Fraction( (f1[0].getNumerator() + f1[1].getNumerator()) , f1[0].getDenominator());
+    	return f2;
+    }
+    
 }
