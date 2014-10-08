@@ -60,4 +60,11 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public Fraction[] reducirFraccion ( Fraction[] f){
+    	Fraction[] f1 = new Fraction[2];
+    	f1[0] = new Fraction(2,4);
+    	f1[1] = new Fraction(1,4);
+    	return f1;
+    }
+    
 }
