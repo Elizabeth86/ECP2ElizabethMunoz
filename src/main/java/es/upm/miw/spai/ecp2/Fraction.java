@@ -60,4 +60,12 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public boolean isEquivalent(Fraction f1, Fraction f2){
+    	boolean isEquivalent = false;
+    	if(f1.getNumerator() * f2.getDenominator() == f1.getDenominator() * f2.getNumerator()){
+    		isEquivalent = true;
+    	}
+    	return isEquivalent;
+    }
+    
 }
