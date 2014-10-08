@@ -41,5 +41,13 @@ public class Point {
     public String toString() {
         return "Point[" + x + "," + y + "]";
     }
+
+	public boolean setX(int i) {
+		return true;
+	}
+
+	public boolean setY(int i) {
+		return true;
+	}
     
 }

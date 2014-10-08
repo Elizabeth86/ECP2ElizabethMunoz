@@ -1,5 +1,7 @@
 package es.upm.miw.spai.ecp2;
 
+import java.util.ArrayList;
+
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el
  * denominador
@@ -59,5 +61,15 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
+
+	public boolean isEquivalente(Fraction f1, Fraction f2) {
+		return false;
+	}
     
+	public ArrayList<Fraction> reducirFraccion(ArrayList<Fraction> fracciones) {
+		ArrayList<Fraction> fraccionesReducidas = new ArrayList<Fraction>();
+		
+		return fraccionesReducidas;
+	}
+	
 }
