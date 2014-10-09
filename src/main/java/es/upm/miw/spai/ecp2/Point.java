@@ -42,12 +42,12 @@ public class Point {
         return "Point[" + x + "," + y + "]";
     }
 
-	public boolean setX(int i) {
-		return true;
+	public void setX(int x) {
+		this.x = x;
 	}
 
-	public boolean setY(int i) {
-		return true;
+	public void setY(int y) {
+		this.y = y;
 	}
     
 }

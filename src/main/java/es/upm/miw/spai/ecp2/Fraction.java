@@ -63,7 +63,11 @@ public class Fraction {
     }
 
 	public boolean isEquivalente(Fraction f1, Fraction f2) {
-		return false;
+		boolean isEquivalent = false;
+    	if(f1.getNumerator() * f2.getDenominator() == f1.getDenominator() * f2.getNumerator()){
+    		isEquivalent = true;
+    	}
+    	return isEquivalent;
 	}
     
 	public ArrayList<Fraction> reducirFraccion(ArrayList<Fraction> fracciones) {
@@ -71,8 +75,8 @@ public class Fraction {
 		
 		return fraccionesReducidas;
 	}
-	
-    public Fraction suma (Fraction f){
+    
+    public Fraction sumaFraccion(Fraction f1, Fraction f2){
     	Fraction[] f1 = new Fraction[2];
     	f1[0] = this;
     	f1[1] = f;
@@ -80,6 +84,5 @@ public class Fraction {
     	Fraction f2= new Fraction( (f1[0].getNumerator() + f1[1].getNumerator()) , f1[0].getDenominator());
     	return f2;
     }
-    
 }
 

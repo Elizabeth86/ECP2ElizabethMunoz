@@ -41,5 +41,14 @@ public class DecimalCollectionTest {
         lista.add (11.6);
         assertEquals(11.6, lista.higher(), 10e-5);
     }
+    
+    @Test
+    public void testLesser() {
+        lista.add (7.4);
+        lista.add (8.2);
+        lista.add (11.6);
+        assertEquals(7.4, lista.lesser(), 10e-5);
+    }
 
 }
+
