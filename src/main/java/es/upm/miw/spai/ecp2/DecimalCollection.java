@@ -35,7 +35,7 @@ public class DecimalCollection {
         return higher;
     }
     
-    public double lesser(){
+    public double menorColeccion(){
     	return 1.0;
     }
 
