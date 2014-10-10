@@ -52,13 +52,15 @@ public class PointTest {
     @Test
     public void testSetX() {
     	pt = new Point();
-        assertTrue(pt.setX(2));
+    	pt.setX(2);
+        assertEquals(2, pt.getX());
     }
     
     @Test
     public void testSetY() {
     	pt = new Point();
-        assertTrue(pt.setY(2));
+    	pt.setY(2);
+        assertEquals(2, pt.getY());
     }
     
 }

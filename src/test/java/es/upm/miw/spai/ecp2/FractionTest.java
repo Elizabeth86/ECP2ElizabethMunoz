@@ -19,7 +19,7 @@ public class FractionTest {
     	Fraction f2 = new Fraction(2, 4);
         assertTrue(fn.isEquivalente(f1, f2));
     }
-    
+
     private Fraction fr;
     
     @Test
@@ -43,14 +43,7 @@ public class FractionTest {
     
     @Test
     public void testReducirFraccion() {
-        fr = new Fraction (12,4);
-        Fraction[] f1 = new Fraction[2];
-    	f1[0] = new Fraction(2,4);
-    	f1[1] = new Fraction(1,4);
-    	Fraction[] f = new Fraction[2];
-    	f[0] = new Fraction(1,2);
-    	f[1] = new Fraction(1,4);
-        assertArrayEquals(f1, fr.reducirFraccion(f));
+       
     }
 
     @Test
@@ -61,6 +54,12 @@ public class FractionTest {
         assertEquals(19, fr.getNumerator(), 10e-5);
         assertEquals(15, fr.getDenominator(), 10e-5);
         
+    }
+    
+    @Test
+    public void testMCD() {
+    	fn = new Fraction();
+    	assertEquals(2, fn.MCD(6, 4));
     }
 
 }

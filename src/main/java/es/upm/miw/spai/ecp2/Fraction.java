@@ -37,30 +37,30 @@ import java.util.ArrayList;
  * 
  */
 public class Fraction {
-    private int numerator;
+	private int numerator;
 
-    private int denominator;
+	private int denominator;
 
-    public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
-    }
+	public Fraction(int numerator, int denominator) {
+		this.numerator = numerator;
+		this.denominator = denominator;
+	}
 
-    public Fraction() {
-        this(1, 1);
-    }
+	public Fraction() {
+		this(1, 1);
+	}
 
-    public int getNumerator() {
-        return numerator;
-    }
+	public int getNumerator() {
+		return numerator;
+	}
 
-    public int getDenominator() {
-        return denominator;
-    }
+	public int getDenominator() {
+		return denominator;
+	}
 
-    public double decimal() {
-        return (double) numerator / denominator;
-    }
+	public double decimal() {
+		return (double) numerator / denominator;
+	}
 
 	public boolean isEquivalente(Fraction f1, Fraction f2) {
 		boolean isEquivalent = false;
@@ -69,20 +69,27 @@ public class Fraction {
     	}
     	return isEquivalent;
 	}
-    
-	public ArrayList<Fraction> reducirFraccion(ArrayList<Fraction> fracciones) {
-		ArrayList<Fraction> fraccionesReducidas = new ArrayList<Fraction>();
-		
-		return fraccionesReducidas;
+
+	public int MCD(int a, int b){
+		while(a>0){
+			int t=a;
+			a=b%a;
+			b=t;
+		}
+		return b;
 	}
+
+	
+	public Fraction reducirFraccion(Fraction fraccion) {
+		return new Fraction(this.numerator/this.MCD(this.numerator, this.denominator), 
+				this.denominator/this.MCD(this.numerator, this.denominator));
+	}
+	
     
     public Fraction sumaFraccion(Fraction f1, Fraction f2){
-    	Fraction[] f1 = new Fraction[2];
-    	f1[0] = this;
-    	f1[1] = f;
-    	f1 = reducirFraccion(f1);
-    	Fraction f2= new Fraction( (f1[0].getNumerator() + f1[1].getNumerator()) , f1[0].getDenominator());
+    	
     	return f2;
     }
+
 }
 
