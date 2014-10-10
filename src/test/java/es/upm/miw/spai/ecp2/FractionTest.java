@@ -20,4 +20,11 @@ public class FractionTest {
     	Fraction f2 = new Fraction(2, 4);
         assertTrue(fn.isEquivalente(f1, f2));
     }
+    
+    @Test
+    public void testMCD() {
+    	fn = new Fraction();
+    	assertEquals(2, fn.MCD(6, 4));
+    }
+    
 }
